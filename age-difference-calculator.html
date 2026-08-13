@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2DLBDS9JWH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2DLBDS9JWH');
+</script>
+<title>Age Difference Calculator - Compare Two Birth Dates</title>
+<meta name="description" content="Calculate the exact age gap between two people. Enter both dates of birth and see the difference in years, months, and days.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://www.dateofbirthcalculator.life/age-difference-calculator">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<meta name="theme-color" content="#2454ff">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Date of Birth Calculator">
+<meta property="og:title" content="Age Difference Calculator - Compare Two Birth Dates">
+<meta property="og:description" content="Calculate the exact age gap between two people. Enter both dates of birth and see the difference in years, months, and days.">
+<meta property="og:url" content="https://www.dateofbirthcalculator.life/age-difference-calculator">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Age Difference Calculator - Compare Two Birth Dates">
+<meta name="twitter:description" content="Calculate the exact age gap between two people. Enter both dates of birth and see the difference in years, months, and days.">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Age Difference Calculator", "description": "Calculate the exact age gap between two people. Enter both dates of birth and see the difference in years, months, and days.", "url": "https://www.dateofbirthcalculator.life/age-difference-calculator", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How is the exact age difference between two people calculated?", "acceptedAnswer": {"@type": "Answer", "text": "The calculator compares both dates of birth directly and returns the gap in years, months, and days, along with total days, weeks, and months for convenience."}}, {"@type": "Question", "name": "Does it matter which date I enter first?", "acceptedAnswer": {"@type": "Answer", "text": "No. The calculator automatically figures out which date is earlier and labels the older person accordingly."}}, {"@type": "Question", "name": "Can I use this to compare ages at a specific event, not just today?", "acceptedAnswer": {"@type": "Answer", "text": "This version compares birth dates directly, which gives you the permanent age gap between the two people, the same gap that holds true on any date."}}]}]</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <span class="brand-mark">DB</span>
+        <span>Date of Birth Calculator</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul><li><a href="/">Age Calculator</a></li><li><a href="/age-difference-calculator">Age Difference</a></li><li><a href="/days-until-my-birthday">Days Until Birthday</a></li><li><a href="/numerology-calculator-by-date-of-birth">Numerology</a></li><li><a href="/zodiac-sign-calculator-by-date-of-birth">Zodiac Sign</a></li><li><a href="/born-in/">Born In a Year</a></li></ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile">
+      <ul><li><a href="/">Age Calculator</a></li><li><a href="/age-difference-calculator">Age Difference</a></li><li><a href="/days-until-my-birthday">Days Until Birthday</a></li><li><a href="/numerology-calculator-by-date-of-birth">Numerology</a></li><li><a href="/zodiac-sign-calculator-by-date-of-birth">Zodiac Sign</a></li><li><a href="/born-in/">Born In a Year</a></li></ul>
+    </nav>
+  </header>
+
+<main id="main">
+
+  <section class="hero container">
+    <span class="eyebrow">Comparison Tool</span>
+    <h1>Age Difference Calculator</h1>
+    <p class="lede">Enter two dates of birth and see the exact age gap between them in years, months, and days.</p>
+  </section>
+
+  <section class="container">
+    <div class="tool-card">
+      <form id="ad-form" novalidate>
+        <div class="tool-grid cols-2">
+          <div class="field">
+            <label for="ad-a">First date of birth</label>
+            <input type="date" id="ad-a" class="js-max-today" required>
+          </div>
+          <div class="field">
+            <label for="ad-b">Second date of birth</label>
+            <input type="date" id="ad-b" class="js-max-today" required>
+          </div>
+        </div>
+        <div class="tool-grid" style="margin-top:14px">
+          <button type="submit" class="btn">Calculate Age Difference</button>
+        </div>
+        <p class="error-msg" id="ad-error" role="alert"></p>
+      </form>
+      <div class="results" id="ad-results">
+        <div class="result-hero">
+          <div class="big-num" id="ad-big">-</div>
+          <div class="big-label">age gap</div>
+        </div>
+        <div class="stat-grid">
+          <div class="stat"><div class="num" id="ad-older">-</div><div class="lbl">Older person</div></div>
+          <div class="stat"><div class="num" id="ad-days">-</div><div class="lbl">Total days apart</div></div>
+          <div class="stat"><div class="num" id="ad-weeks">-</div><div class="lbl">Total weeks apart</div></div>
+          <div class="stat"><div class="num" id="ad-months">-</div><div class="lbl">Total months apart</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container content-block">
+    <h2>When you would use an age difference calculator</h2>
+    <p>Age gaps come up more often than you would think: comparing your age to a sibling's, checking the gap between partners, figuring out how many years separate two coworkers, or working out how old a parent was when their child was born. This tool gives you the exact gap, not a rounded estimate, by comparing the two dates directly.</p>
+
+    <h2>How the age gap is calculated</h2>
+    <p>The calculator lines up both birth dates and works out the difference the same way you would count on a calendar: full years, then leftover months, then leftover days. It also gives you the total gap in days, weeks, and months, which is useful if you want a single number instead of a mixed unit answer.</p>
+  </section>
+
+    <section class="section container content-block">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-item"><h3>How is the exact age difference between two people calculated?</h3><p>The calculator compares both dates of birth directly and returns the gap in years, months, and days, along with total days, weeks, and months for convenience.</p></div><div class="faq-item"><h3>Does it matter which date I enter first?</h3><p>No. The calculator automatically figures out which date is earlier and labels the older person accordingly.</p></div><div class="faq-item"><h3>Can I use this to compare ages at a specific event, not just today?</h3><p>This version compares birth dates directly, which gives you the permanent age gap between the two people, the same gap that holds true on any date.</p></div>
+    </section>
+
+    <section class="section container">
+      <h2>More free calculators</h2>
+      <div class="related-tools">
+          <a class="tool-link" href="/">
+            <strong>Age & Date of Birth Calculator</strong>
+            <span>Full age breakdown, day of week born, and days until your next birthday.</span>
+          </a>
+          <a class="tool-link" href="/day-of-the-week-you-were-born">
+            <strong>Day of the Week You Were Born</strong>
+            <span>Find the exact weekday your birth date fell on.</span>
+          </a>
+          <a class="tool-link" href="/days-until-my-birthday">
+            <strong>Days Until My Birthday</strong>
+            <span>Live countdown to your next birthday, down to the day.</span>
+          </a>
+          <a class="tool-link" href="/how-many-days-have-i-been-alive">
+            <strong>How Many Days Have I Been Alive</strong>
+            <span>Total days, weeks, and hours since you were born.</span>
+          </a>
+          <a class="tool-link" href="/age-in-months-and-weeks-calculator">
+            <strong>Age in Months and Weeks</strong>
+            <span>See your exact age broken into months, weeks, and days.</span>
+          </a>
+          <a class="tool-link" href="/numerology-calculator-by-date-of-birth">
+            <strong>Numerology by Date of Birth</strong>
+            <span>Calculate your life path number and name number.</span>
+          </a>
+      </div>
+    </section>
+
+<script>
+document.getElementById('ad-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  var dobA = Calc.parseDateInput(document.getElementById('ad-a').value);
+  var dobB = Calc.parseDateInput(document.getElementById('ad-b').value);
+  var err = document.getElementById('ad-error');
+  var results = document.getElementById('ad-results');
+  if(!dobA || !dobB){ err.textContent='Please enter both dates of birth.'; err.classList.add('show'); results.classList.remove('show'); return; }
+  err.classList.remove('show');
+  var diff = Calc.ageDifference(dobA, dobB);
+  document.getElementById('ad-big').textContent = diff.years + 'y ' + diff.months + 'm ' + diff.days + 'd';
+  document.getElementById('ad-older').textContent = diff.olderIsA ? 'First date' : 'Second date';
+  document.getElementById('ad-days').textContent = diff.totalDays.toLocaleString();
+  document.getElementById('ad-weeks').textContent = Math.floor(diff.totalDays/7).toLocaleString();
+  document.getElementById('ad-months').textContent = (diff.years*12+diff.months).toLocaleString();
+  results.classList.add('show');
+  results.scrollIntoView({behavior:'smooth', block:'nearest'});
+});
+</script>
+
+</main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Date of Birth Calculator</h4>
+          <p class="footer-brand-note">Free, fast birthday and age tools that run entirely in your browser. Enter a date, get an instant, accurate answer, no sign up and no data stored.</p>
+        </div>
+        <div>
+          <h4>Calculators</h4>
+          <ul><li><a href="/">Age & Date of Birth Calculator</a></li><li><a href="/day-of-the-week-you-were-born">Day of the Week You Were Born</a></li><li><a href="/age-difference-calculator">Age Difference Calculator</a></li><li><a href="/days-until-my-birthday">Days Until My Birthday</a></li><li><a href="/how-many-days-have-i-been-alive">How Many Days Have I Been Alive</a></li><li><a href="/age-in-months-and-weeks-calculator">Age in Months and Weeks</a></li><li><a href="/numerology-calculator-by-date-of-birth">Numerology by Date of Birth</a></li><li><a href="/love-calculator-by-date-of-birth">Love Calculator by Date of Birth</a></li><li><a href="/zodiac-sign-calculator-by-date-of-birth">Zodiac Sign Calculator</a></li><li><a href="/retirement-age-calculator">Retirement Age Calculator</a></li></ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul><li><a href="/about">About Us</a></li><li><a href="/contact">Contact</a></li><li><a href="/born-in/">Born in a Year (all years)</a></li></ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul><li><a href="/privacy-policy">Privacy Policy</a></li><li><a href="/terms">Terms of Use</a></li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-current-year>2026</span> Date of Birth Calculator. All rights reserved.</span>
+        <span>Built for accuracy. Not a substitute for legal, medical, or financial advice.</span>
+      </div>
+    </div>
+  </footer>
+
+<script src="/assets/js/calculators.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

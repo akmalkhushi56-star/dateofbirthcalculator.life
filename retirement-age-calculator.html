@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2DLBDS9JWH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2DLBDS9JWH');
+</script>
+<title>Retirement Age Calculator - Find Your Full Retirement Age</title>
+<meta name="description" content="Calculate your official full retirement age and target retirement date based on your date of birth, using the US Social Security schedule.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://www.dateofbirthcalculator.life/retirement-age-calculator">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<meta name="theme-color" content="#2454ff">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Date of Birth Calculator">
+<meta property="og:title" content="Retirement Age Calculator - Find Your Full Retirement Age">
+<meta property="og:description" content="Calculate your official full retirement age and target retirement date based on your date of birth, using the US Social Security schedule.">
+<meta property="og:url" content="https://www.dateofbirthcalculator.life/retirement-age-calculator">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Retirement Age Calculator - Find Your Full Retirement Age">
+<meta name="twitter:description" content="Calculate your official full retirement age and target retirement date based on your date of birth, using the US Social Security schedule.">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Retirement Age Calculator", "description": "Calculate your official full retirement age and target retirement date based on your date of birth, using the US Social Security schedule.", "url": "https://www.dateofbirthcalculator.life/retirement-age-calculator", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How is full retirement age determined?", "acceptedAnswer": {"@type": "Answer", "text": "It is set by your birth year according to the official Social Security Administration schedule, and this calculator applies that schedule automatically."}}, {"@type": "Question", "name": "Can I retire earlier than my full retirement age?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, early retirement benefits are usually available starting at 62, though the monthly benefit amount is permanently reduced compared to waiting until full retirement age. Check ssa.gov for exact figures."}}, {"@type": "Question", "name": "Is this calculator official Social Security guidance?", "acceptedAnswer": {"@type": "Answer", "text": "No, this tool provides general informational estimates based on the publicly available birth year schedule. Always confirm specifics directly with the Social Security Administration."}}]}]</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <span class="brand-mark">DB</span>
+        <span>Date of Birth Calculator</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul><li><a href="/">Age Calculator</a></li><li><a href="/age-difference-calculator">Age Difference</a></li><li><a href="/days-until-my-birthday">Days Until Birthday</a></li><li><a href="/numerology-calculator-by-date-of-birth">Numerology</a></li><li><a href="/zodiac-sign-calculator-by-date-of-birth">Zodiac Sign</a></li><li><a href="/born-in/">Born In a Year</a></li></ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile">
+      <ul><li><a href="/">Age Calculator</a></li><li><a href="/age-difference-calculator">Age Difference</a></li><li><a href="/days-until-my-birthday">Days Until Birthday</a></li><li><a href="/numerology-calculator-by-date-of-birth">Numerology</a></li><li><a href="/zodiac-sign-calculator-by-date-of-birth">Zodiac Sign</a></li><li><a href="/born-in/">Born In a Year</a></li></ul>
+    </nav>
+  </header>
+
+<main id="main">
+
+  <section class="hero container">
+    <span class="eyebrow">Planning Tool</span>
+    <h1>Retirement Age Calculator</h1>
+    <p class="lede">Enter your date of birth to find your official full retirement age and target retirement date, based on the US Social Security schedule.</p>
+  </section>
+
+  <section class="container">
+    <div class="tool-card">
+      <form id="rt-form" novalidate>
+        <div class="tool-grid cols-2">
+          <div class="field">
+            <label for="rt-input">Your date of birth</label>
+            <input type="date" id="rt-input" class="js-max-today" required>
+          </div>
+          <div class="field" style="justify-content:flex-end">
+            <button type="submit" class="btn">Calculate Retirement Age</button>
+          </div>
+        </div>
+        <p class="error-msg" id="rt-error" role="alert"></p>
+      </form>
+      <div class="results" id="rt-results">
+        <div class="result-hero">
+          <div class="big-num" id="rt-age">-</div>
+          <div class="big-label">full retirement age</div>
+        </div>
+        <div class="stat-grid">
+          <div class="stat"><div class="num" id="rt-date">-</div><div class="lbl">Target retirement date</div></div>
+          <div class="stat"><div class="num" id="rt-years-left">-</div><div class="lbl">Years remaining</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container content-block">
+    <h2>What "full retirement age" actually means</h2>
+    <p>In the United States, full retirement age is the age at which you become eligible for 100 percent of your Social Security retirement benefit. It is not the same for everyone: it depends entirely on your birth year, and it has gradually shifted upward from 65 to 67 for people born from 1938 onward.</p>
+    <p>This calculator uses the official Social Security Administration schedule to work out your full retirement age and the exact date you reach it, based only on your date of birth.</p>
+    <h2>The birth year schedule this tool uses</h2>
+    <table class="data-table">
+      <thead><tr><th>Birth year</th><th>Full retirement age</th></tr></thead>
+      <tbody>
+        <tr><td>1937 or earlier</td><td>65</td></tr>
+        <tr><td>1938 to 1942</td><td>65 plus 2 months per year after 1937</td></tr>
+        <tr><td>1943 to 1954</td><td>66</td></tr>
+        <tr><td>1955 to 1959</td><td>66 plus 2 months per year after 1954</td></tr>
+        <tr><td>1960 or later</td><td>67</td></tr>
+      </tbody>
+    </table>
+    <div class="callout warn">This is general information based on the published Social Security schedule, not personalized financial or retirement advice. Confirm your exact benefit details at ssa.gov before making any decisions.</div>
+  </section>
+
+    <section class="section container content-block">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-item"><h3>How is full retirement age determined?</h3><p>It is set by your birth year according to the official Social Security Administration schedule, and this calculator applies that schedule automatically.</p></div><div class="faq-item"><h3>Can I retire earlier than my full retirement age?</h3><p>Yes, early retirement benefits are usually available starting at 62, though the monthly benefit amount is permanently reduced compared to waiting until full retirement age. Check ssa.gov for exact figures.</p></div><div class="faq-item"><h3>Is this calculator official Social Security guidance?</h3><p>No, this tool provides general informational estimates based on the publicly available birth year schedule. Always confirm specifics directly with the Social Security Administration.</p></div>
+    </section>
+
+    <section class="section container">
+      <h2>More free calculators</h2>
+      <div class="related-tools">
+          <a class="tool-link" href="/">
+            <strong>Age & Date of Birth Calculator</strong>
+            <span>Full age breakdown, day of week born, and days until your next birthday.</span>
+          </a>
+          <a class="tool-link" href="/day-of-the-week-you-were-born">
+            <strong>Day of the Week You Were Born</strong>
+            <span>Find the exact weekday your birth date fell on.</span>
+          </a>
+          <a class="tool-link" href="/age-difference-calculator">
+            <strong>Age Difference Calculator</strong>
+            <span>Compare two birth dates and see the exact age gap.</span>
+          </a>
+          <a class="tool-link" href="/days-until-my-birthday">
+            <strong>Days Until My Birthday</strong>
+            <span>Live countdown to your next birthday, down to the day.</span>
+          </a>
+          <a class="tool-link" href="/how-many-days-have-i-been-alive">
+            <strong>How Many Days Have I Been Alive</strong>
+            <span>Total days, weeks, and hours since you were born.</span>
+          </a>
+          <a class="tool-link" href="/age-in-months-and-weeks-calculator">
+            <strong>Age in Months and Weeks</strong>
+            <span>See your exact age broken into months, weeks, and days.</span>
+          </a>
+      </div>
+    </section>
+
+<script>
+document.getElementById('rt-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  var dob = Calc.parseDateInput(document.getElementById('rt-input').value);
+  var err = document.getElementById('rt-error');
+  var results = document.getElementById('rt-results');
+  if(!dob){ err.textContent='Please enter a valid date of birth.'; err.classList.add('show'); results.classList.remove('show'); return; }
+  err.classList.remove('show');
+  var r = Calc.retirementDate(dob);
+  document.getElementById('rt-age').textContent = r.fra.years + (r.fra.months ? ' yr ' + r.fra.months + ' mo' : ' years');
+  document.getElementById('rt-date').textContent = Calc.MONTHS[r.date.getMonth()] + ' ' + r.date.getDate() + ', ' + r.date.getFullYear();
+  var today = Calc.todayNoon();
+  var yearsLeft = ((r.date.getTime() - today.getTime()) / (365.25*86400000));
+  document.getElementById('rt-years-left').textContent = yearsLeft > 0 ? yearsLeft.toFixed(1) : '0 (reached)';
+  results.classList.add('show');
+  results.scrollIntoView({behavior:'smooth', block:'nearest'});
+});
+</script>
+
+</main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Date of Birth Calculator</h4>
+          <p class="footer-brand-note">Free, fast birthday and age tools that run entirely in your browser. Enter a date, get an instant, accurate answer, no sign up and no data stored.</p>
+        </div>
+        <div>
+          <h4>Calculators</h4>
+          <ul><li><a href="/">Age & Date of Birth Calculator</a></li><li><a href="/day-of-the-week-you-were-born">Day of the Week You Were Born</a></li><li><a href="/age-difference-calculator">Age Difference Calculator</a></li><li><a href="/days-until-my-birthday">Days Until My Birthday</a></li><li><a href="/how-many-days-have-i-been-alive">How Many Days Have I Been Alive</a></li><li><a href="/age-in-months-and-weeks-calculator">Age in Months and Weeks</a></li><li><a href="/numerology-calculator-by-date-of-birth">Numerology by Date of Birth</a></li><li><a href="/love-calculator-by-date-of-birth">Love Calculator by Date of Birth</a></li><li><a href="/zodiac-sign-calculator-by-date-of-birth">Zodiac Sign Calculator</a></li><li><a href="/retirement-age-calculator">Retirement Age Calculator</a></li></ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul><li><a href="/about">About Us</a></li><li><a href="/contact">Contact</a></li><li><a href="/born-in/">Born in a Year (all years)</a></li></ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul><li><a href="/privacy-policy">Privacy Policy</a></li><li><a href="/terms">Terms of Use</a></li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-current-year>2026</span> Date of Birth Calculator. All rights reserved.</span>
+        <span>Built for accuracy. Not a substitute for legal, medical, or financial advice.</span>
+      </div>
+    </div>
+  </footer>
+
+<script src="/assets/js/calculators.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

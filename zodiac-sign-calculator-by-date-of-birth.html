@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2DLBDS9JWH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2DLBDS9JWH');
+</script>
+<title>Zodiac Sign Calculator by Date of Birth - Western and Chinese</title>
+<meta name="description" content="Find your western zodiac sign and Chinese zodiac animal from your date of birth. Free, instant, and easy to use.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://www.dateofbirthcalculator.life/zodiac-sign-calculator-by-date-of-birth">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<meta name="theme-color" content="#2454ff">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Date of Birth Calculator">
+<meta property="og:title" content="Zodiac Sign Calculator by Date of Birth - Western and Chinese">
+<meta property="og:description" content="Find your western zodiac sign and Chinese zodiac animal from your date of birth. Free, instant, and easy to use.">
+<meta property="og:url" content="https://www.dateofbirthcalculator.life/zodiac-sign-calculator-by-date-of-birth">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Zodiac Sign Calculator by Date of Birth - Western and Chinese">
+<meta name="twitter:description" content="Find your western zodiac sign and Chinese zodiac animal from your date of birth. Free, instant, and easy to use.">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Zodiac Sign Calculator by Date of Birth", "description": "Find your western zodiac sign and Chinese zodiac animal from your date of birth. Free, instant, and easy to use.", "url": "https://www.dateofbirthcalculator.life/zodiac-sign-calculator-by-date-of-birth", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I find my zodiac sign from my date of birth?", "acceptedAnswer": {"@type": "Answer", "text": "Enter your date of birth above. The calculator checks the month and day against the standard zodiac date ranges and returns your western sign instantly."}}, {"@type": "Question", "name": "What is the difference between a zodiac sign and a Chinese zodiac animal?", "acceptedAnswer": {"@type": "Answer", "text": "A western zodiac sign is based on the exact month and day of birth and changes roughly every month. A Chinese zodiac animal is based on the birth year and changes only once every twelve years."}}, {"@type": "Question", "name": "Why might my Chinese zodiac animal be off by one for a January or February birthday?", "acceptedAnswer": {"@type": "Answer", "text": "The Chinese calendar year starts on a different date each year, usually in late January or February, not January 1. This calculator uses the standard calendar year, which is accurate except for that short window."}}]}]</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <span class="brand-mark">DB</span>
+        <span>Date of Birth Calculator</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul><li><a href="/">Age Calculator</a></li><li><a href="/age-difference-calculator">Age Difference</a></li><li><a href="/days-until-my-birthday">Days Until Birthday</a></li><li><a href="/numerology-calculator-by-date-of-birth">Numerology</a></li><li><a href="/zodiac-sign-calculator-by-date-of-birth">Zodiac Sign</a></li><li><a href="/born-in/">Born In a Year</a></li></ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile">
+      <ul><li><a href="/">Age Calculator</a></li><li><a href="/age-difference-calculator">Age Difference</a></li><li><a href="/days-until-my-birthday">Days Until Birthday</a></li><li><a href="/numerology-calculator-by-date-of-birth">Numerology</a></li><li><a href="/zodiac-sign-calculator-by-date-of-birth">Zodiac Sign</a></li><li><a href="/born-in/">Born In a Year</a></li></ul>
+    </nav>
+  </header>
+
+<main id="main">
+
+  <section class="hero container">
+    <span class="eyebrow">Astrology</span>
+    <h1>Zodiac Sign Calculator by Date of Birth</h1>
+    <p class="lede">Enter your date of birth to find your western zodiac sign and your Chinese zodiac animal at the same time.</p>
+  </section>
+
+  <section class="container">
+    <div class="tool-card">
+      <form id="zd-form" novalidate>
+        <div class="tool-grid cols-2">
+          <div class="field">
+            <label for="zd-input">Your date of birth</label>
+            <input type="date" id="zd-input" class="js-max-today" required>
+          </div>
+          <div class="field" style="justify-content:flex-end">
+            <button type="submit" class="btn">Find My Signs</button>
+          </div>
+        </div>
+        <p class="error-msg" id="zd-error" role="alert"></p>
+      </form>
+      <div class="results" id="zd-results">
+        <div class="stat-grid">
+          <div class="stat"><div class="num" id="zd-western">-</div><div class="lbl">Western zodiac sign</div></div>
+          <div class="stat"><div class="num" id="zd-chinese">-</div><div class="lbl">Chinese zodiac animal</div></div>
+        </div>
+        <div class="callout" id="zd-desc" style="margin-top:16px"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container content-block">
+    <h2>Two zodiac systems, one date of birth</h2>
+    <p>Your date of birth actually maps to two completely different zodiac systems. The western zodiac, the one most people mean by "star sign," is based on the sun's position on your birth date and runs through twelve signs across the calendar year. The Chinese zodiac instead assigns an animal to your entire birth year, cycling through twelve animals once every twelve years.</p>
+    <p>This calculator gives you both in one step: your western sign based on the month and day you were born, and your Chinese zodiac animal based on the year.</p>
+    <div class="callout">Note on the Chinese zodiac: the traditional Chinese calendar year does not start on January 1, so people born in January or early February sometimes technically belong to the previous animal year. This calculator uses the calendar year for simplicity, which is accurate for the vast majority of birth dates.</div>
+  </section>
+
+    <section class="section container content-block">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-item"><h3>How do I find my zodiac sign from my date of birth?</h3><p>Enter your date of birth above. The calculator checks the month and day against the standard zodiac date ranges and returns your western sign instantly.</p></div><div class="faq-item"><h3>What is the difference between a zodiac sign and a Chinese zodiac animal?</h3><p>A western zodiac sign is based on the exact month and day of birth and changes roughly every month. A Chinese zodiac animal is based on the birth year and changes only once every twelve years.</p></div><div class="faq-item"><h3>Why might my Chinese zodiac animal be off by one for a January or February birthday?</h3><p>The Chinese calendar year starts on a different date each year, usually in late January or February, not January 1. This calculator uses the standard calendar year, which is accurate except for that short window.</p></div>
+    </section>
+
+    <section class="section container">
+      <h2>More free calculators</h2>
+      <div class="related-tools">
+          <a class="tool-link" href="/">
+            <strong>Age & Date of Birth Calculator</strong>
+            <span>Full age breakdown, day of week born, and days until your next birthday.</span>
+          </a>
+          <a class="tool-link" href="/day-of-the-week-you-were-born">
+            <strong>Day of the Week You Were Born</strong>
+            <span>Find the exact weekday your birth date fell on.</span>
+          </a>
+          <a class="tool-link" href="/age-difference-calculator">
+            <strong>Age Difference Calculator</strong>
+            <span>Compare two birth dates and see the exact age gap.</span>
+          </a>
+          <a class="tool-link" href="/days-until-my-birthday">
+            <strong>Days Until My Birthday</strong>
+            <span>Live countdown to your next birthday, down to the day.</span>
+          </a>
+          <a class="tool-link" href="/how-many-days-have-i-been-alive">
+            <strong>How Many Days Have I Been Alive</strong>
+            <span>Total days, weeks, and hours since you were born.</span>
+          </a>
+          <a class="tool-link" href="/age-in-months-and-weeks-calculator">
+            <strong>Age in Months and Weeks</strong>
+            <span>See your exact age broken into months, weeks, and days.</span>
+          </a>
+      </div>
+    </section>
+
+<script>
+var ZODIAC_TRAITS = {
+  Aries:"bold, energetic, and quick to take the lead.",
+  Taurus:"steady, patient, and drawn to comfort and stability.",
+  Gemini:"curious, chatty, and quick to adapt to new situations.",
+  Cancer:"caring, intuitive, and deeply loyal to close relationships.",
+  Leo:"confident, warm, and comfortable being the center of attention.",
+  Virgo:"detail oriented, practical, and a natural problem solver.",
+  Libra:"diplomatic, fair minded, and drawn to balance and harmony.",
+  Scorpio:"intense, determined, and hard to read on the surface.",
+  Sagittarius:"adventurous, optimistic, and always chasing the next idea.",
+  Capricorn:"disciplined, ambitious, and focused on long-term goals.",
+  Aquarius:"independent, inventive, and often ahead of the curve.",
+  Pisces:"imaginative, empathetic, and guided by emotion and intuition."
+};
+document.getElementById('zd-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  var dob = Calc.parseDateInput(document.getElementById('zd-input').value);
+  var err = document.getElementById('zd-error');
+  var results = document.getElementById('zd-results');
+  if(!dob){ err.textContent='Please enter a valid date of birth.'; err.classList.add('show'); results.classList.remove('show'); return; }
+  err.classList.remove('show');
+  var western = Calc.westernZodiac(dob.getMonth()+1, dob.getDate());
+  var chinese = Calc.chineseZodiac(dob.getFullYear());
+  document.getElementById('zd-western').textContent = western;
+  document.getElementById('zd-chinese').textContent = chinese;
+  document.getElementById('zd-desc').textContent = western + 's tend to be ' + ZODIAC_TRAITS[western] + ' In the Chinese zodiac, the Year of the ' + chinese + ' rounds out the picture on a 12 year cycle.';
+  results.classList.add('show');
+  results.scrollIntoView({behavior:'smooth', block:'nearest'});
+});
+</script>
+
+</main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Date of Birth Calculator</h4>
+          <p class="footer-brand-note">Free, fast birthday and age tools that run entirely in your browser. Enter a date, get an instant, accurate answer, no sign up and no data stored.</p>
+        </div>
+        <div>
+          <h4>Calculators</h4>
+          <ul><li><a href="/">Age & Date of Birth Calculator</a></li><li><a href="/day-of-the-week-you-were-born">Day of the Week You Were Born</a></li><li><a href="/age-difference-calculator">Age Difference Calculator</a></li><li><a href="/days-until-my-birthday">Days Until My Birthday</a></li><li><a href="/how-many-days-have-i-been-alive">How Many Days Have I Been Alive</a></li><li><a href="/age-in-months-and-weeks-calculator">Age in Months and Weeks</a></li><li><a href="/numerology-calculator-by-date-of-birth">Numerology by Date of Birth</a></li><li><a href="/love-calculator-by-date-of-birth">Love Calculator by Date of Birth</a></li><li><a href="/zodiac-sign-calculator-by-date-of-birth">Zodiac Sign Calculator</a></li><li><a href="/retirement-age-calculator">Retirement Age Calculator</a></li></ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul><li><a href="/about">About Us</a></li><li><a href="/contact">Contact</a></li><li><a href="/born-in/">Born in a Year (all years)</a></li></ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul><li><a href="/privacy-policy">Privacy Policy</a></li><li><a href="/terms">Terms of Use</a></li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-current-year>2026</span> Date of Birth Calculator. All rights reserved.</span>
+        <span>Built for accuracy. Not a substitute for legal, medical, or financial advice.</span>
+      </div>
+    </div>
+  </footer>
+
+<script src="/assets/js/calculators.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

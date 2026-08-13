@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2DLBDS9JWH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2DLBDS9JWH');
+</script>
+<title>Date of Birth Calculator - Free Age Calculator Online</title>
+<meta name="description" content="Calculate your exact age, the day of the week you were born, days until your next birthday, zodiac sign and more. Free, instant, and accurate.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://www.dateofbirthcalculator.life/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<meta name="theme-color" content="#2454ff">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Date of Birth Calculator">
+<meta property="og:title" content="Date of Birth Calculator - Free Age Calculator Online">
+<meta property="og:description" content="Calculate your exact age, the day of the week you were born, days until your next birthday, zodiac sign and more. Free, instant, and accurate.">
+<meta property="og:url" content="https://www.dateofbirthcalculator.life/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Date of Birth Calculator - Free Age Calculator Online">
+<meta name="twitter:description" content="Calculate your exact age, the day of the week you were born, days until your next birthday, zodiac sign and more. Free, instant, and accurate.">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Date of Birth Calculator", "description": "Calculate your exact age, the day of the week you were born, days until your next birthday, zodiac sign and more. Free, instant, and accurate.", "url": "https://www.dateofbirthcalculator.life/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How accurate is this date of birth calculator?", "acceptedAnswer": {"@type": "Answer", "text": "It uses calendar-accurate date math, the same logic used in spreadsheet and calendar software, so results are precise down to the day. It also correctly accounts for leap years and varying month lengths."}}, {"@type": "Question", "name": "Does this tool store or share my birth date?", "acceptedAnswer": {"@type": "Answer", "text": "No. The calculation runs entirely in your browser using JavaScript. Your date of birth is never sent to a server, saved in a database, or shared with anyone."}}, {"@type": "Question", "name": "Can I calculate someone else's age, not just my own?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Enter any date of birth, past or present, and the calculator will return that person's exact age and other details."}}, {"@type": "Question", "name": "Why does my age in months look different from years times twelve?", "acceptedAnswer": {"@type": "Answer", "text": "Because months vary in length. The calculator counts full calendar months between your birth date and today, which is more accurate than a flat multiplication."}}, {"@type": "Question", "name": "What if I was born on February 29?", "acceptedAnswer": {"@type": "Answer", "text": "Leap day birthdays are handled correctly. In non-leap years, the calculator treats February 28 as the observed birthday for countdown purposes."}}]}]</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <span class="brand-mark">DB</span>
+        <span>Date of Birth Calculator</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul><li><a href="/">Age Calculator</a></li><li><a href="/age-difference-calculator">Age Difference</a></li><li><a href="/days-until-my-birthday">Days Until Birthday</a></li><li><a href="/numerology-calculator-by-date-of-birth">Numerology</a></li><li><a href="/zodiac-sign-calculator-by-date-of-birth">Zodiac Sign</a></li><li><a href="/born-in/">Born In a Year</a></li></ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile">
+      <ul><li><a href="/">Age Calculator</a></li><li><a href="/age-difference-calculator">Age Difference</a></li><li><a href="/days-until-my-birthday">Days Until Birthday</a></li><li><a href="/numerology-calculator-by-date-of-birth">Numerology</a></li><li><a href="/zodiac-sign-calculator-by-date-of-birth">Zodiac Sign</a></li><li><a href="/born-in/">Born In a Year</a></li></ul>
+    </nav>
+  </header>
+
+<main id="main">
+
+  <section class="hero container">
+    <span class="eyebrow">Free Online Tool</span>
+    <h1>Date of Birth Calculator</h1>
+    <p class="lede">Enter your date of birth and instantly see your exact age, the day of the week you were born, and how many days remain until your next birthday.</p>
+  </section>
+
+  <section class="container">
+    <div class="tool-card">
+      <form id="dob-form" novalidate>
+        <div class="tool-grid cols-2">
+          <div class="field">
+            <label for="dob-input">Your date of birth</label>
+            <input type="date" id="dob-input" name="dob" class="js-max-today" required>
+            <small>We never store or send this date anywhere. Everything runs in your browser.</small>
+          </div>
+          <div class="field" style="justify-content:flex-end">
+            <button type="submit" class="btn">Calculate My Age</button>
+          </div>
+        </div>
+        <p class="error-msg" id="dob-error" role="alert"></p>
+      </form>
+
+      <div class="results" id="dob-results">
+        <div class="result-hero">
+          <div class="big-num" id="r-age-big">0</div>
+          <div class="big-label" id="r-age-detail">years old</div>
+        </div>
+        <div class="stat-grid">
+          <div class="stat"><div class="num" id="r-weekday">-</div><div class="lbl">Day you were born</div></div>
+          <div class="stat"><div class="num" id="r-days-alive">-</div><div class="lbl">Total days alive</div></div>
+          <div class="stat"><div class="num" id="r-next-bday">-</div><div class="lbl">Until next birthday</div></div>
+          <div class="stat"><div class="num" id="r-zodiac">-</div><div class="lbl">Zodiac sign</div></div>
+          <div class="stat"><div class="num" id="r-chinese">-</div><div class="lbl">Chinese zodiac</div></div>
+          <div class="stat"><div class="num" id="r-generation">-</div><div class="lbl">Generation</div></div>
+          <div class="stat"><div class="num" id="r-months">-</div><div class="lbl">Total months</div></div>
+          <div class="stat"><div class="num" id="r-weeks">-</div><div class="lbl">Total weeks</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section class="section container content-block">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-item"><h3>How accurate is this date of birth calculator?</h3><p>It uses calendar-accurate date math, the same logic used in spreadsheet and calendar software, so results are precise down to the day. It also correctly accounts for leap years and varying month lengths.</p></div><div class="faq-item"><h3>Does this tool store or share my birth date?</h3><p>No. The calculation runs entirely in your browser using JavaScript. Your date of birth is never sent to a server, saved in a database, or shared with anyone.</p></div><div class="faq-item"><h3>Can I calculate someone else's age, not just my own?</h3><p>Yes. Enter any date of birth, past or present, and the calculator will return that person's exact age and other details.</p></div><div class="faq-item"><h3>Why does my age in months look different from years times twelve?</h3><p>Because months vary in length. The calculator counts full calendar months between your birth date and today, which is more accurate than a flat multiplication.</p></div><div class="faq-item"><h3>What if I was born on February 29?</h3><p>Leap day birthdays are handled correctly. In non-leap years, the calculator treats February 28 as the observed birthday for countdown purposes.</p></div>
+    </section>
+
+    <section class="section container">
+      <h2>More free calculators</h2>
+      <div class="related-tools">
+          <a class="tool-link" href="/day-of-the-week-you-were-born">
+            <strong>Day of the Week You Were Born</strong>
+            <span>Find the exact weekday your birth date fell on.</span>
+          </a>
+          <a class="tool-link" href="/age-difference-calculator">
+            <strong>Age Difference Calculator</strong>
+            <span>Compare two birth dates and see the exact age gap.</span>
+          </a>
+          <a class="tool-link" href="/days-until-my-birthday">
+            <strong>Days Until My Birthday</strong>
+            <span>Live countdown to your next birthday, down to the day.</span>
+          </a>
+          <a class="tool-link" href="/how-many-days-have-i-been-alive">
+            <strong>How Many Days Have I Been Alive</strong>
+            <span>Total days, weeks, and hours since you were born.</span>
+          </a>
+          <a class="tool-link" href="/age-in-months-and-weeks-calculator">
+            <strong>Age in Months and Weeks</strong>
+            <span>See your exact age broken into months, weeks, and days.</span>
+          </a>
+          <a class="tool-link" href="/numerology-calculator-by-date-of-birth">
+            <strong>Numerology by Date of Birth</strong>
+            <span>Calculate your life path number and name number.</span>
+          </a>
+      </div>
+    </section>
+
+<script>
+document.getElementById('dob-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  var dob = Calc.parseDateInput(document.getElementById('dob-input').value);
+  var err = document.getElementById('dob-error');
+  var results = document.getElementById('dob-results');
+  if(!dob){ err.textContent = 'Please enter a valid date of birth.'; err.classList.add('show'); results.classList.remove('show'); return; }
+  var a = Calc.ageBreakdown(dob);
+  if(!a){ err.textContent = 'That date is in the future. Please double check the year.'; err.classList.add('show'); results.classList.remove('show'); return; }
+  err.classList.remove('show');
+  document.getElementById('r-age-big').textContent = a.years;
+  document.getElementById('r-age-detail').textContent = a.years + ' years, ' + a.months + ' months, ' + a.days + ' days old';
+  document.getElementById('r-weekday').textContent = a.dayOfWeekBorn;
+  document.getElementById('r-days-alive').textContent = a.totalDays.toLocaleString();
+  document.getElementById('r-next-bday').textContent = a.nextBirthday.daysUntil + (a.nextBirthday.daysUntil === 1 ? ' day' : ' days');
+  document.getElementById('r-zodiac').textContent = a.zodiac;
+  document.getElementById('r-chinese').textContent = a.chineseZodiac;
+  document.getElementById('r-generation').textContent = a.generation;
+  document.getElementById('r-months').textContent = a.totalMonths.toLocaleString();
+  document.getElementById('r-weeks').textContent = a.totalWeeks.toLocaleString();
+  results.classList.add('show');
+  results.scrollIntoView({behavior:'smooth', block:'nearest'});
+});
+</script>
+
+</main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Date of Birth Calculator</h4>
+          <p class="footer-brand-note">Free, fast birthday and age tools that run entirely in your browser. Enter a date, get an instant, accurate answer, no sign up and no data stored.</p>
+        </div>
+        <div>
+          <h4>Calculators</h4>
+          <ul><li><a href="/">Age & Date of Birth Calculator</a></li><li><a href="/day-of-the-week-you-were-born">Day of the Week You Were Born</a></li><li><a href="/age-difference-calculator">Age Difference Calculator</a></li><li><a href="/days-until-my-birthday">Days Until My Birthday</a></li><li><a href="/how-many-days-have-i-been-alive">How Many Days Have I Been Alive</a></li><li><a href="/age-in-months-and-weeks-calculator">Age in Months and Weeks</a></li><li><a href="/numerology-calculator-by-date-of-birth">Numerology by Date of Birth</a></li><li><a href="/love-calculator-by-date-of-birth">Love Calculator by Date of Birth</a></li><li><a href="/zodiac-sign-calculator-by-date-of-birth">Zodiac Sign Calculator</a></li><li><a href="/retirement-age-calculator">Retirement Age Calculator</a></li></ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul><li><a href="/about">About Us</a></li><li><a href="/contact">Contact</a></li><li><a href="/born-in/">Born in a Year (all years)</a></li></ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul><li><a href="/privacy-policy">Privacy Policy</a></li><li><a href="/terms">Terms of Use</a></li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-current-year>2026</span> Date of Birth Calculator. All rights reserved.</span>
+        <span>Built for accuracy. Not a substitute for legal, medical, or financial advice.</span>
+      </div>
+    </div>
+  </footer>
+
+<script src="/assets/js/calculators.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2DLBDS9JWH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2DLBDS9JWH');
+</script>
+<title>What Day of the Week Was I Born? - Free Calculator</title>
+<meta name="description" content="Find out exactly which day of the week your birth date fell on. Enter your date of birth and get an instant, accurate answer.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://www.dateofbirthcalculator.life/day-of-the-week-you-were-born">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<meta name="theme-color" content="#2454ff">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Date of Birth Calculator">
+<meta property="og:title" content="What Day of the Week Was I Born? - Free Calculator">
+<meta property="og:description" content="Find out exactly which day of the week your birth date fell on. Enter your date of birth and get an instant, accurate answer.">
+<meta property="og:url" content="https://www.dateofbirthcalculator.life/day-of-the-week-you-were-born">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="What Day of the Week Was I Born? - Free Calculator">
+<meta name="twitter:description" content="Find out exactly which day of the week your birth date fell on. Enter your date of birth and get an instant, accurate answer.">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Day of the Week You Were Born Calculator", "description": "Find out exactly which day of the week your birth date fell on. Enter your date of birth and get an instant, accurate answer.", "url": "https://www.dateofbirthcalculator.life/day-of-the-week-you-were-born", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I find out what day of the week I was born on?", "acceptedAnswer": {"@type": "Answer", "text": "Enter your date of birth above and the calculator instantly returns the exact weekday, calculated directly from the calendar rather than estimated."}}, {"@type": "Question", "name": "Is there a way to figure this out without a calculator?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, using a doomsday algorithm, a mental math trick that uses anchor dates known to fall on the same weekday every year. It takes practice, but this tool gives you the same accurate result instantly."}}, {"@type": "Question", "name": "Do weekdays repeat in a predictable cycle?", "acceptedAnswer": {"@type": "Answer", "text": "The Gregorian calendar repeats its weekday pattern every 400 years, though within your lifetime the pattern will look irregular because of leap years shifting things by a day every four years."}}, {"@type": "Question", "name": "Can I check the weekday for someone else's birth date, not just mine?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, this works for any date of birth, past or present."}}]}]</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <span class="brand-mark">DB</span>
+        <span>Date of Birth Calculator</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul><li><a href="/">Age Calculator</a></li><li><a href="/age-difference-calculator">Age Difference</a></li><li><a href="/days-until-my-birthday">Days Until Birthday</a></li><li><a href="/numerology-calculator-by-date-of-birth">Numerology</a></li><li><a href="/zodiac-sign-calculator-by-date-of-birth">Zodiac Sign</a></li><li><a href="/born-in/">Born In a Year</a></li></ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile">
+      <ul><li><a href="/">Age Calculator</a></li><li><a href="/age-difference-calculator">Age Difference</a></li><li><a href="/days-until-my-birthday">Days Until Birthday</a></li><li><a href="/numerology-calculator-by-date-of-birth">Numerology</a></li><li><a href="/zodiac-sign-calculator-by-date-of-birth">Zodiac Sign</a></li><li><a href="/born-in/">Born In a Year</a></li></ul>
+    </nav>
+  </header>
+
+<main id="main">
+
+  <section class="hero container">
+    <span class="eyebrow">Birthday Trivia</span>
+    <h1>What Day of the Week Was I Born?</h1>
+    <p class="lede">Enter your date of birth and instantly find out which day of the week it fell on, along with a few related facts.</p>
+  </section>
+
+  <section class="container">
+    <div class="tool-card">
+      <form id="wd-form" novalidate>
+        <div class="tool-grid cols-2">
+          <div class="field">
+            <label for="wd-input">Your date of birth</label>
+            <input type="date" id="wd-input" class="js-max-today" required>
+          </div>
+          <div class="field" style="justify-content:flex-end">
+            <button type="submit" class="btn">Find My Birth Day</button>
+          </div>
+        </div>
+        <p class="error-msg" id="wd-error" role="alert"></p>
+      </form>
+      <div class="results" id="wd-results">
+        <div class="result-hero">
+          <div class="big-num" id="wd-day" style="font-size:clamp(1.8rem,6vw,2.6rem)">-</div>
+          <div class="big-label" id="wd-sub">was your birth day</div>
+        </div>
+        <div class="stat-grid">
+          <div class="stat"><div class="num" id="wd-age">-</div><div class="lbl">Current age</div></div>
+          <div class="stat"><div class="num" id="wd-today">-</div><div class="lbl">Today is a</div></div>
+          <div class="stat"><div class="num" id="wd-nextbday-day">-</div><div class="lbl">Next birthday falls on</div></div>
+          <div class="stat"><div class="num" id="wd-daysalive">-</div><div class="lbl">Days alive</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container content-block">
+    <h2>Why the day of the week you were born is not random trivia</h2>
+    <p>Every date in history lands on exactly one day of the week, and once you know the pattern, you can work it out in your head. This calculator gives you the instant answer, but it is worth understanding the logic behind it, especially if you like party tricks.</p>
+
+    <h2>The short version of how it is calculated</h2>
+    <p>The Gregorian calendar repeats on a 400 year cycle. Mathematicians such as Karl Friedrich Gauss and later Lewis Carroll (yes, that Lewis Carroll) both published methods for working out the weekday of any date by hand, usually called "doomsday" algorithms. They rely on the fact that certain easy to remember dates always fall on the same weekday within a given year, for example 4/4, 6/6, 8/8, 10/10 and 12/12 all share a weekday every year. From there you count forward or back to your actual birth date.</p>
+    <p>This tool skips the mental math and reads the weekday straight from the calendar system built into every browser, so the answer is exact, not estimated.</p>
+
+    <h2>Fun ways to use this</h2>
+    <ul>
+      <li>Settle a family debate about which day someone was actually born on.</li>
+      <li>Add a small detail to a birthday card: "born on a Tuesday" hits differently.</li>
+      <li>Check whether your birthday and a friend's birthday fall on matching weekdays in a given year.</li>
+    </ul>
+  </section>
+
+    <section class="section container content-block">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-item"><h3>How do I find out what day of the week I was born on?</h3><p>Enter your date of birth above and the calculator instantly returns the exact weekday, calculated directly from the calendar rather than estimated.</p></div><div class="faq-item"><h3>Is there a way to figure this out without a calculator?</h3><p>Yes, using a doomsday algorithm, a mental math trick that uses anchor dates known to fall on the same weekday every year. It takes practice, but this tool gives you the same accurate result instantly.</p></div><div class="faq-item"><h3>Do weekdays repeat in a predictable cycle?</h3><p>The Gregorian calendar repeats its weekday pattern every 400 years, though within your lifetime the pattern will look irregular because of leap years shifting things by a day every four years.</p></div><div class="faq-item"><h3>Can I check the weekday for someone else's birth date, not just mine?</h3><p>Yes, this works for any date of birth, past or present.</p></div>
+    </section>
+
+    <section class="section container">
+      <h2>More free calculators</h2>
+      <div class="related-tools">
+          <a class="tool-link" href="/">
+            <strong>Age & Date of Birth Calculator</strong>
+            <span>Full age breakdown, day of week born, and days until your next birthday.</span>
+          </a>
+          <a class="tool-link" href="/age-difference-calculator">
+            <strong>Age Difference Calculator</strong>
+            <span>Compare two birth dates and see the exact age gap.</span>
+          </a>
+          <a class="tool-link" href="/days-until-my-birthday">
+            <strong>Days Until My Birthday</strong>
+            <span>Live countdown to your next birthday, down to the day.</span>
+          </a>
+          <a class="tool-link" href="/how-many-days-have-i-been-alive">
+            <strong>How Many Days Have I Been Alive</strong>
+            <span>Total days, weeks, and hours since you were born.</span>
+          </a>
+          <a class="tool-link" href="/age-in-months-and-weeks-calculator">
+            <strong>Age in Months and Weeks</strong>
+            <span>See your exact age broken into months, weeks, and days.</span>
+          </a>
+          <a class="tool-link" href="/numerology-calculator-by-date-of-birth">
+            <strong>Numerology by Date of Birth</strong>
+            <span>Calculate your life path number and name number.</span>
+          </a>
+      </div>
+    </section>
+
+<script>
+document.getElementById('wd-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  var dob = Calc.parseDateInput(document.getElementById('wd-input').value);
+  var err = document.getElementById('wd-error');
+  var results = document.getElementById('wd-results');
+  if(!dob){ err.textContent='Please enter a valid date.'; err.classList.add('show'); results.classList.remove('show'); return; }
+  var a = Calc.ageBreakdown(dob);
+  if(!a){ err.textContent='That date is in the future.'; err.classList.add('show'); results.classList.remove('show'); return; }
+  err.classList.remove('show');
+  document.getElementById('wd-day').textContent = a.dayOfWeekBorn;
+  document.getElementById('wd-age').textContent = a.years + ' yrs';
+  document.getElementById('wd-today').textContent = Calc.WEEKDAYS[Calc.todayNoon().getDay()];
+  document.getElementById('wd-nextbday-day').textContent = Calc.WEEKDAYS[a.nextBirthday.date.getDay()];
+  document.getElementById('wd-daysalive').textContent = a.totalDays.toLocaleString();
+  results.classList.add('show');
+  results.scrollIntoView({behavior:'smooth', block:'nearest'});
+});
+</script>
+
+</main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Date of Birth Calculator</h4>
+          <p class="footer-brand-note">Free, fast birthday and age tools that run entirely in your browser. Enter a date, get an instant, accurate answer, no sign up and no data stored.</p>
+        </div>
+        <div>
+          <h4>Calculators</h4>
+          <ul><li><a href="/">Age & Date of Birth Calculator</a></li><li><a href="/day-of-the-week-you-were-born">Day of the Week You Were Born</a></li><li><a href="/age-difference-calculator">Age Difference Calculator</a></li><li><a href="/days-until-my-birthday">Days Until My Birthday</a></li><li><a href="/how-many-days-have-i-been-alive">How Many Days Have I Been Alive</a></li><li><a href="/age-in-months-and-weeks-calculator">Age in Months and Weeks</a></li><li><a href="/numerology-calculator-by-date-of-birth">Numerology by Date of Birth</a></li><li><a href="/love-calculator-by-date-of-birth">Love Calculator by Date of Birth</a></li><li><a href="/zodiac-sign-calculator-by-date-of-birth">Zodiac Sign Calculator</a></li><li><a href="/retirement-age-calculator">Retirement Age Calculator</a></li></ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul><li><a href="/about">About Us</a></li><li><a href="/contact">Contact</a></li><li><a href="/born-in/">Born in a Year (all years)</a></li></ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul><li><a href="/privacy-policy">Privacy Policy</a></li><li><a href="/terms">Terms of Use</a></li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-current-year>2026</span> Date of Birth Calculator. All rights reserved.</span>
+        <span>Built for accuracy. Not a substitute for legal, medical, or financial advice.</span>
+      </div>
+    </div>
+  </footer>
+
+<script src="/assets/js/calculators.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
