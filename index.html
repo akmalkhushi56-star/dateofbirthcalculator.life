@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +15,12 @@
 <meta name="description" content="Calculate your exact age, the day of the week you were born, days until your next birthday, zodiac sign and more. Free, instant, and accurate.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://www.dateofbirthcalculator.life/">
+<link rel="alternate" hreflang="en" href="https://www.dateofbirthcalculator.life/">
+<link rel="alternate" hreflang="es" href="https://www.dateofbirthcalculator.life/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://www.dateofbirthcalculator.life/pt/">
+<link rel="alternate" hreflang="de" href="https://www.dateofbirthcalculator.life/de/">
+<link rel="alternate" hreflang="ar" href="https://www.dateofbirthcalculator.life/ar/">
+<link rel="alternate" hreflang="x-default" href="https://www.dateofbirthcalculator.life/">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
@@ -22,6 +28,7 @@
 <meta name="theme-color" content="#2454ff">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Date of Birth Calculator">
+<meta property="og:locale" content="en_US">
 <meta property="og:title" content="Date of Birth Calculator - Free Age Calculator Online">
 <meta property="og:description" content="Calculate your exact age, the day of the week you were born, days until your next birthday, zodiac sign and more. Free, instant, and accurate.">
 <meta property="og:url" content="https://www.dateofbirthcalculator.life/">
@@ -29,6 +36,7 @@
 <meta name="twitter:title" content="Date of Birth Calculator - Free Age Calculator Online">
 <meta name="twitter:description" content="Calculate your exact age, the day of the week you were born, days until your next birthday, zodiac sign and more. Free, instant, and accurate.">
 <link rel="stylesheet" href="/assets/css/style.css">
+
 
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Date of Birth Calculator", "description": "Calculate your exact age, the day of the week you were born, days until your next birthday, zodiac sign and more. Free, instant, and accurate.", "url": "https://www.dateofbirthcalculator.life/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How accurate is this date of birth calculator?", "acceptedAnswer": {"@type": "Answer", "text": "It uses calendar-accurate date math, the same logic used in spreadsheet and calendar software, so results are precise down to the day. It also correctly accounts for leap years and varying month lengths."}}, {"@type": "Question", "name": "Does this tool store or share my birth date?", "acceptedAnswer": {"@type": "Answer", "text": "No. The calculation runs entirely in your browser using JavaScript. Your date of birth is never sent to a server, saved in a database, or shared with anyone."}}, {"@type": "Question", "name": "Can I calculate someone else's age, not just my own?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Enter any date of birth, past or present, and the calculator will return that person's exact age and other details."}}, {"@type": "Question", "name": "Why does my age in months look different from years times twelve?", "acceptedAnswer": {"@type": "Answer", "text": "Because months vary in length. The calculator counts full calendar months between your birth date and today, which is more accurate than a flat multiplication."}}, {"@type": "Question", "name": "What if I was born on February 29?", "acceptedAnswer": {"@type": "Answer", "text": "Leap day birthdays are handled correctly. In non-leap years, the calculator treats February 28 as the observed birthday for countdown purposes."}}]}]</script>
 </head>
@@ -44,12 +52,14 @@
       <nav class="main-nav" aria-label="Primary">
         <ul><li><a href="/">Age Calculator</a></li><li><a href="/age-difference-calculator">Age Difference</a></li><li><a href="/days-until-my-birthday">Days Until Birthday</a></li><li><a href="/numerology-calculator-by-date-of-birth">Numerology</a></li><li><a href="/zodiac-sign-calculator-by-date-of-birth">Zodiac Sign</a></li><li><a href="/born-in/">Born In a Year</a></li></ul>
       </nav>
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <div class="lang-switch"><a href="/" class="current" aria-current="true">English</a><a href="/es/">Español</a><a href="/pt/">Português</a><a href="/de/">Deutsch</a><a href="/ar/">العربية</a></div>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
     </div>
     <nav class="mobile-nav" aria-label="Mobile">
       <ul><li><a href="/">Age Calculator</a></li><li><a href="/age-difference-calculator">Age Difference</a></li><li><a href="/days-until-my-birthday">Days Until Birthday</a></li><li><a href="/numerology-calculator-by-date-of-birth">Numerology</a></li><li><a href="/zodiac-sign-calculator-by-date-of-birth">Zodiac Sign</a></li><li><a href="/born-in/">Born In a Year</a></li></ul>
+      <div class="lang-switch"><a href="/" class="current" aria-current="true">English</a><a href="/es/">Español</a><a href="/pt/">Português</a><a href="/de/">Deutsch</a><a href="/ar/">العربية</a></div>
     </nav>
   </header>
 
