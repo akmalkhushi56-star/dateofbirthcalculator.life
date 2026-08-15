@@ -17,5 +17,15 @@
     document.querySelectorAll('input[type="date"].js-max-today').forEach(function (el) {
       el.max = todayStr;
     });
+
+    // Close the language dropdown when clicking outside it.
+    var langSwitch = document.querySelector('details.lang-switch');
+    if (langSwitch) {
+      document.addEventListener('click', function (e) {
+        if (langSwitch.hasAttribute('open') && !langSwitch.contains(e.target)) {
+          langSwitch.removeAttribute('open');
+        }
+      });
+    }
   });
 })();

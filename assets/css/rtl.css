@@ -1,0 +1,45 @@
+/* RTL overrides, loaded only on Arabic pages (dir="rtl" on <html>).
+   Flexbox and grid already mirror automatically under dir=rtl; this file
+   only fixes the handful of hardcoded left/right physical properties. */
+
+[dir="rtl"] ul,
+[dir="rtl"] ol{
+  padding-left:0;
+  padding-right:1.3em;
+}
+[dir="rtl"] .skip-link{
+  left:auto;
+  right:-999px;
+  border-radius:0 0 0 8px;
+}
+[dir="rtl"] .skip-link:focus{
+  left:auto;
+  right:0;
+}
+[dir="rtl"] .lang-switch{
+  margin-left:0;
+  margin-right:8px;
+}
+[dir="rtl"] table.data-table th,
+[dir="rtl"] table.data-table td{
+  text-align:right;
+}
+[dir="rtl"] .callout{
+  border-left:none;
+  border-right:4px solid var(--blue-600);
+  border-radius:8px 0 0 8px;
+}
+[dir="rtl"] .callout.warn{
+  border-right-color:var(--amber-600);
+}
+[dir="rtl"] .field{
+  text-align:right;
+}
+[dir="rtl"] .stat,
+[dir="rtl"] .result-hero,
+[dir="rtl"] .tool-link{
+  text-align:center;
+}
+[dir="rtl"] .breadcrumb{
+  text-align:right;
+}

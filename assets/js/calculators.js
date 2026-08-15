@@ -198,8 +198,49 @@ var Calc = (function () {
     return { date: d, fra: fra };
   }
 
+  // Display-string translations for the non-English locales. English values
+  // returned by the functions above (weekday/month/zodiac/generation names)
+  // are used as lookup keys here, with English itself as the safe fallback.
+  var I18N = {
+    weekday: {
+      es: {Sunday:"Domingo",Monday:"Lunes",Tuesday:"Martes",Wednesday:"Miercoles",Thursday:"Jueves",Friday:"Viernes",Saturday:"Sabado"},
+      pt: {Sunday:"Domingo",Monday:"Segunda-feira",Tuesday:"Terca-feira",Wednesday:"Quarta-feira",Thursday:"Quinta-feira",Friday:"Sexta-feira",Saturday:"Sabado"},
+      de: {Sunday:"Sonntag",Monday:"Montag",Tuesday:"Dienstag",Wednesday:"Mittwoch",Thursday:"Donnerstag",Friday:"Freitag",Saturday:"Samstag"},
+      ar: {Sunday:"الأحد",Monday:"الاثنين",Tuesday:"الثلاثاء",Wednesday:"الأربعاء",Thursday:"الخميس",Friday:"الجمعة",Saturday:"السبت"}
+    },
+    month: {
+      es: {January:"Enero",February:"Febrero",March:"Marzo",April:"Abril",May:"Mayo",June:"Junio",July:"Julio",August:"Agosto",September:"Septiembre",October:"Octubre",November:"Noviembre",December:"Diciembre"},
+      pt: {January:"Janeiro",February:"Fevereiro",March:"Marco",April:"Abril",May:"Maio",June:"Junho",July:"Julho",August:"Agosto",September:"Setembro",October:"Outubro",November:"Novembro",December:"Dezembro"},
+      de: {January:"Januar",February:"Februar",March:"Maerz",April:"April",May:"Mai",June:"Juni",July:"Juli",August:"August",September:"September",October:"Oktober",November:"November",December:"Dezember"},
+      ar: {January:"يناير",February:"فبراير",March:"مارس",April:"أبريل",May:"مايو",June:"يونيو",July:"يوليو",August:"أغسطس",September:"سبتمبر",October:"أكتوبر",November:"نوفمبر",December:"ديسمبر"}
+    },
+    zodiac: {
+      es: {Aries:"Aries",Taurus:"Tauro",Gemini:"Geminis",Cancer:"Cancer",Leo:"Leo",Virgo:"Virgo",Libra:"Libra",Scorpio:"Escorpio",Sagittarius:"Sagitario",Capricorn:"Capricornio",Aquarius:"Acuario",Pisces:"Piscis"},
+      pt: {Aries:"Aries",Taurus:"Touro",Gemini:"Gemeos",Cancer:"Cancer",Leo:"Leao",Virgo:"Virgem",Libra:"Libra",Scorpio:"Escorpiao",Sagittarius:"Sagitario",Capricorn:"Capricornio",Aquarius:"Aquario",Pisces:"Peixes"},
+      de: {Aries:"Widder",Taurus:"Stier",Gemini:"Zwillinge",Cancer:"Krebs",Leo:"Loewe",Virgo:"Jungfrau",Libra:"Waage",Scorpio:"Skorpion",Sagittarius:"Schuetze",Capricorn:"Steinbock",Aquarius:"Wassermann",Pisces:"Fische"},
+      ar: {Aries:"الحمل",Taurus:"الثور",Gemini:"الجوزاء",Cancer:"السرطان",Leo:"الأسد",Virgo:"العذراء",Libra:"الميزان",Scorpio:"العقرب",Sagittarius:"القوس",Capricorn:"الجدي",Aquarius:"الدلو",Pisces:"الحوت"}
+    },
+    chinese: {
+      es: {Rat:"Rata",Ox:"Buey",Tiger:"Tigre",Rabbit:"Conejo",Dragon:"Dragon",Snake:"Serpiente",Horse:"Caballo",Goat:"Cabra",Monkey:"Mono",Rooster:"Gallo",Dog:"Perro",Pig:"Cerdo"},
+      pt: {Rat:"Rato",Ox:"Boi",Tiger:"Tigre",Rabbit:"Coelho",Dragon:"Dragao",Snake:"Serpente",Horse:"Cavalo",Goat:"Cabra",Monkey:"Macaco",Rooster:"Galo",Dog:"Cao",Pig:"Porco"},
+      de: {Rat:"Ratte",Ox:"Bueffel",Tiger:"Tiger",Rabbit:"Hase",Dragon:"Drache",Snake:"Schlange",Horse:"Pferd",Goat:"Ziege",Monkey:"Affe",Rooster:"Hahn",Dog:"Hund",Pig:"Schwein"},
+      ar: {Rat:"الجرذ",Ox:"الثور",Tiger:"النمر",Rabbit:"الأرنب",Dragon:"التنين",Snake:"الأفعى",Horse:"الحصان",Goat:"الماعز",Monkey:"القرد",Rooster:"الديك",Dog:"الكلب",Pig:"الخنزير"}
+    },
+    generation: {
+      es: {"Lost Generation":"Generacion Perdida","Greatest Generation":"Generacion Grandiosa","Silent Generation":"Generacion Silenciosa","Baby Boomer":"Baby Boomer","Generation X":"Generacion X","Millennial (Gen Y)":"Millennial (Generacion Y)","Generation Z":"Generacion Z","Generation Alpha":"Generacion Alfa","Historic":"Historica","Generation Beta":"Generacion Beta"},
+      pt: {"Lost Generation":"Geracao Perdida","Greatest Generation":"Grande Geracao","Silent Generation":"Geracao Silenciosa","Baby Boomer":"Baby Boomer","Generation X":"Geracao X","Millennial (Gen Y)":"Millennial (Geracao Y)","Generation Z":"Geracao Z","Generation Alpha":"Geracao Alfa","Historic":"Historica","Generation Beta":"Geracao Beta"},
+      de: {"Lost Generation":"Verlorene Generation","Greatest Generation":"Groesste Generation","Silent Generation":"Stille Generation","Baby Boomer":"Babyboomer","Generation X":"Generation X","Millennial (Gen Y)":"Millennials (Generation Y)","Generation Z":"Generation Z","Generation Alpha":"Generation Alpha","Historic":"Historisch","Generation Beta":"Generation Beta"},
+      ar: {"Lost Generation":"الجيل الضائع","Greatest Generation":"الجيل الأعظم","Silent Generation":"الجيل الصامت","Baby Boomer":"جيل طفرة المواليد","Generation X":"جيل إكس","Millennial (Gen Y)":"جيل الألفية","Generation Z":"الجيل زد","Generation Alpha":"جيل ألفا","Historic":"تاريخي","Generation Beta":"جيل بيتا"}
+    }
+  };
+  function localize(category, enValue, locale) {
+    if (!locale || locale === "en") return enValue;
+    var table = I18N[category] && I18N[category][locale];
+    return (table && table[enValue]) || enValue;
+  }
+
   return {
-    WEEKDAYS: WEEKDAYS, MONTHS: MONTHS, GENERATIONS: GENERATIONS,
+    WEEKDAYS: WEEKDAYS, MONTHS: MONTHS, GENERATIONS: GENERATIONS, localize: localize,
     parseDateInput: parseDateInput, todayNoon: todayNoon, isLeapYear: isLeapYear, daysInMonth: daysInMonth,
     diffYMD: diffYMD, totalDaysBetween: totalDaysBetween, nextBirthdayFrom: nextBirthdayFrom,
     ageBreakdown: ageBreakdown, westernZodiac: westernZodiac, chineseZodiac: chineseZodiac, generationFor: generationFor,
