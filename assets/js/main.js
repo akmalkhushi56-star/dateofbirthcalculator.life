@@ -27,5 +27,50 @@
         }
       });
     }
+
+    // Generic share-row handler. Any .share-row with data-text/data-url set
+    // (by the page's own result script, once a result is computed) works with
+    // this single handler - no per-page share code needed.
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('.share-btn');
+      if (!btn) return;
+      var row = btn.closest('.share-row');
+      var text = (row && row.dataset.text) || document.title;
+      var url = (row && row.dataset.url) || window.location.href;
+      var platform = btn.getAttribute('data-share');
+
+      if (platform === 'copy') {
+        var label = btn.querySelector('.share-label');
+        var restore = label ? label.textContent : null;
+        var done = function () {
+          if (label) { label.textContent = 'Copied!'; setTimeout(function () { label.textContent = restore; }, 1500); }
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done).catch(function () {});
+        }
+        return;
+      }
+      if (platform === 'native') {
+        if (navigator.share) { navigator.share({ text: text, url: url }).catch(function () {}); }
+        return;
+      }
+      var links = {
+        whatsapp: 'https://wa.me/?text=' + encodeURIComponent(text + ' ' + url),
+        facebook: 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url) + '&quote=' + encodeURIComponent(text),
+        x: 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url)
+      };
+      if (links[platform]) {
+        window.open(links[platform], '_blank', 'noopener,width=600,height=520');
+        if (window.gtag) { window.gtag('event', 'share_click', { platform: platform, page: window.location.pathname }); }
+      }
+    });
+
+    // Show the native-share button only when the browser actually supports it
+    // (mostly mobile); desktop keeps the explicit WhatsApp/Facebook/X row.
+    if (navigator.share) {
+      document.querySelectorAll('.share-btn[data-share="native"]').forEach(function (el) {
+        el.hidden = false;
+      });
+    }
   });
 })();

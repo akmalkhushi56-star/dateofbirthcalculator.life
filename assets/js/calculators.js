@@ -198,6 +198,27 @@ var Calc = (function () {
     return { date: d, fra: fra };
   }
 
+  // Life in weeks: a full-life grid (default 90 years), showing weeks lived
+  // vs. weeks remaining. Used by the Life Calendar tool.
+  function lifeInWeeks(dob, lifespanYears, ref) {
+    ref = ref || todayNoon();
+    lifespanYears = lifespanYears || 90;
+    var totalDays = totalDaysBetween(dob, ref);
+    var weeksLived = Math.max(0, Math.floor(totalDays / 7));
+    var totalWeeks = Math.round(lifespanYears * 52.1775);
+    var weeksRemaining = Math.max(0, totalWeeks - weeksLived);
+    var percentLived = Math.min(100, Math.round((weeksLived / totalWeeks) * 1000) / 10);
+    var yearsRemaining = Math.max(0, lifespanYears - (totalDays / 365.2425));
+    return {
+      weeksLived: weeksLived,
+      totalWeeks: totalWeeks,
+      weeksRemaining: weeksRemaining,
+      percentLived: percentLived,
+      yearsRemainingApprox: Math.round(yearsRemaining),
+      lifespanYears: lifespanYears
+    };
+  }
+
   // Display-string translations for the non-English locales. English values
   // returned by the functions above (weekday/month/zodiac/generation names)
   // are used as lookup keys here, with English itself as the safe fallback.
@@ -245,6 +266,6 @@ var Calc = (function () {
     diffYMD: diffYMD, totalDaysBetween: totalDaysBetween, nextBirthdayFrom: nextBirthdayFrom,
     ageBreakdown: ageBreakdown, westernZodiac: westernZodiac, chineseZodiac: chineseZodiac, generationFor: generationFor,
     ageDifference: ageDifference, lifePathNumber: lifePathNumber, nameNumerology: nameNumerology, loveScore: loveScore,
-    fullRetirementAge: fullRetirementAge, retirementDate: retirementDate, pad: pad
+    fullRetirementAge: fullRetirementAge, retirementDate: retirementDate, pad: pad, lifeInWeeks: lifeInWeeks
   };
 })();
