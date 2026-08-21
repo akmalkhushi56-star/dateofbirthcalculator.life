@@ -12,6 +12,13 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.dateofbirthcalculator.life/life-calendar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dateofbirthcalculator.life/life-calendar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dateofbirthcalculator.life/life-calendar"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://www.dateofbirthcalculator.life/day-of-the-week-you-were-born</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.dateofbirthcalculator.life/day-of-the-week-you-were-born"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.dateofbirthcalculator.life/es/day-of-the-week-you-were-born"/>
